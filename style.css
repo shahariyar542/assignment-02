@@ -1,3 +1,173 @@
-body{
-    background-color: antiquewhite;
+/* --- Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    background-color: #261850; /* ডার্ক থিম ব্যাকগ্রাউন্ড */
+    padding: 20px 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container {
+    width: 90%; 
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- Logo Styles --- */
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    width: 219px;
+    height: 32px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.logo .color-highlight {
+    /* লোগোর জন্য নির্দিষ্ট গ্রাডিয়েন্ট */
+    background: linear-gradient(20deg, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* --- Navigation Links (Desktop) --- */
+.nav-links {
+    display: flex;
+    font-size: 16px;
+    font font-weight: 500px;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #E0E0E0;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FFFFFF;
+}
+
+/* --- Right Side Wrapper --- */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+/* --- Subscribe Button (Desktop Default) --- */
+.btn-subscribe {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    border-radius: 50px;
+    /* বাটনের জন্য নিখুঁত মাল্টি-কালার গ্রাডিয়েন্ট */
+    background: linear-gradient(40deg, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    transition: transform 0.3s;
+}
+
+.btn-subscribe:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* --- Hamburger Menu (Desktop এ হাইড থাকবে) --- */
+.hamburger-menu {
+    display: none; /* এই লাইনটি ডেস্কটপ থেকে আইকন সরিয়ে দিবে */
+}
+
+.hamburger-menu img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* --- Responsive Layout (Max-width: 576px) --- */
+@media screen and (max-width: 576px) {
+    
+    /* ১. মেনু লিঙ্কগুলো হাইড করা */
+    .nav-links {
+        display: none;
+    }
+
+    /* ২. সাবস্ক্রাইব বাটন হাইড করা */
+    .btn-subscribe {
+        display: none;
+    }
+
+    /* ৩. হ্যামবার্গার আইকন শো করা */
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* ৪. মোবাইলে লোগোর সাইজ কিছুটা অ্যাডজাস্ট করা */
+    .logo {
+        font-size: 24px;
+    }
+}
+//* banner styles */
+.banner-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 200px;
+    background-image:url(./assets/hero-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: auto;
+    
+    
+}
+.microphone-container {
+   background-image: url(./assets/hero-circle.png);
+   height: 350px;
+   width: 350px;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   margin: 20px 0;
+}
+
+#new {
+   background-color: #00FF88;
+   color: #1A0B2E;
+   position: absolute;
+   top: 15px;
+   right: 35px;
+   padding: 8px 16px;
+   font-size: 16px;
+   font-weight: 700;
+   border-radius: 50px;
+   box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+}
+#new:hover{
+    cursor: unset;
+}
+
+.microphone-container img {
+   max-width: 100px;
+   height: auto;
+   object-fit: contain;
 }
